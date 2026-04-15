@@ -4,7 +4,7 @@ This project was generated using [Angular CLI](https://github.com/angular/angula
 
 ## How to run app
 
-### Pleas not that you should have latesd angular cli installed on your machine
+### Please not that you should have latesd angular cli installed on your machine
 
 Install packages first by: 
 
@@ -15,7 +15,7 @@ npm i
 To start a local development server, run:
 
 ```bash
-npm start
+ng serve or npm start
 ```
 
 Once the server is running, open your browser and navigate to `http://localhost:4200/`. 
@@ -27,8 +27,11 @@ Once the server is running, open your browser and navigate to `http://localhost:
 To build the project run:
 
 ```bash
-ng build
+ng build or npm run build
 ```
 
 This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+
+
+### Secure storage of access token cannot be achieved on frontend, for demonstration purposes I stored it in localStorage. The recommended way to store access token is by use of Backend for frontend to authorize backend services then return session id to frontend as a http only cookie
 
