@@ -83,14 +83,14 @@ export class AddUserComponent {
         next: () => {
           this.snackBar.open('User created successfully! 🎉', 'Close', {
             duration: 3000,
-            panelClass: ['bg-primary text-white'],
+           
           });
           this.router.navigate(['/users']);
         },
         error: (err) => {
           this.snackBar.open('Error saving user. Please try again.', 'Close', {
             duration: 5000,
-            panelClass: ['bg-red-700 text-white'],
+           
           });
         },
       });

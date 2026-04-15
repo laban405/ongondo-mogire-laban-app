@@ -45,10 +45,9 @@ export class UsersPage implements OnInit {
           next: () => {
             this.snackBar.open('User deleted successfully', 'OK', {
               duration: 3000,
-              panelClass: ['bg-primary text-white'],
             });
           },
-          error: () => this.snackBar.open('Error deleting user', 'Close',{panelClass: ['bg-red-700 text-white']}),
+          error: () => this.snackBar.open('Error deleting user', 'Close',),
         });
       }
     });

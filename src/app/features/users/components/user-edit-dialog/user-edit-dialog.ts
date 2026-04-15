@@ -56,10 +56,10 @@ export class UserEditDialogComponent {
     if (this.editForm.valid) {
       this.userService.update(this.data.id, this.editForm.value as Partial<UserModel>).subscribe({
         next: () => {
-          this.snackBar.open('User updated successfully!', 'OK', { duration: 3000 ,panelClass: ['bg-primary text-white']});
+          this.snackBar.open('User updated successfully!', 'OK', { duration: 3000 ,});
           this.dialogRef.close(true);
         },
-        error: () => this.snackBar.open('Update failed', 'Close', { duration: 3000,panelClass: ['bg-red-700 text-white'] })
+        error: () => this.snackBar.open('Update failed', 'Close', { duration: 3000,})
       });
     }
   }
