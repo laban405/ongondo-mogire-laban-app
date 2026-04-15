@@ -18,7 +18,7 @@ import { AuthService } from '../../services/auth.service';
             <input
               formControlName="email"
               type="email"
-              class="w-full p-3 border rounded-lg focus:ring-2 focus:ring-blue-500 outline-none"
+              class="w-full px-4 py-2 border border-secondary rounded-none focus:ring-2 focus:ring-green-500 outline-none shadow-sm"
               [class.border-red-500]="isFieldInvalid('email')"
             />
             @if (isFieldInvalid('email')) {
@@ -31,7 +31,7 @@ import { AuthService } from '../../services/auth.service';
             <input
               formControlName="password"
               type="password"
-              class="w-full p-3 border rounded-lg focus:ring-2 focus:ring-blue-500 outline-none"
+              class="w-full px-4 py-2 border border-secondary rounded-none focus:ring-2 focus:ring-green-500 outline-none shadow-sm"
               [class.border-red-500]="isFieldInvalid('password')"
             />
           </div>
@@ -43,10 +43,16 @@ import { AuthService } from '../../services/auth.service';
           <button
             type="submit"
             [disabled]="loginForm.invalid"
-            class="w-full bg-blue-600 text-white p-3 rounded-lg font-semibold hover:bg-blue-700 disabled:bg-blue-300 transition-colors"
+            class="bg-primary hover:bg-secondary text-white px-4 py-2 rounded-lg transition-colors rounded-none w-full h-[48px] cursor-pointer"
           >
             Log In
           </button>
+
+          <div class="my-4">
+            <p class="mb-2">Test Credentials</p>
+            <p>Email: admin@test.com</p>
+            <p>Password: 1234</p>
+          </div>
         </form>
       </div>
     </div>

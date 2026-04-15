@@ -1,0 +1,10 @@
+<div class="flex min-w-[300px] p-5 shadow mb-4 gap-4 bg-white">
+  <div class="flex-1">
+    <p class="text-lg">{{ user().name }}</p>
+    <p class="text-gray-600">{{ user().email }}</p>
+  </div>
+  <div class="flex gap-2">
+    <button class="bg-secondary p-2 text-white w-[100px] h-[48px] cursor-pointer hover:bg-primary" (click)="onEdit()">Edit</button>
+    <button class="hover:border-2 text-red-700 px-4 py-2 rounded-lg transition-colors rounded-none w-[100px] h-[48px] cursor-pointer" (click)="onDelete()">Delete</button>
+  </div>
+</div>

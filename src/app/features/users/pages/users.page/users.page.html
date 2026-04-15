@@ -1,1 +1,22 @@
-<app-users-list [usersList]="users()"></app-users-list>
+<nav class="py-3 flex justify-between">
+  <app-user-search></app-user-search>
+  <div class="flex gap-3">
+    <button
+      routerLink="/users/add"
+      class="bg-primary hover:bg-secondary text-white px-4 py-2 rounded-lg transition-colors rounded-none w-[100px] h-[48px] cursor-pointer"
+    >
+      Add User
+    </button>
+    <button
+      (click)="logOut()"
+      class="hover:border-2 text-red-700 px-4 py-2 rounded-lg transition-colors rounded-none w-[100px] h-[48px] cursor-pointer"
+    >
+      Log Out
+    </button>
+  </div>
+</nav>
+<app-users-list
+  [usersList]="users()"
+  (deleteUser)="onDelete($event)"
+  (editUser)="onEdit($event)"
+></app-users-list>

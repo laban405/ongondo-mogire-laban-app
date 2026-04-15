@@ -1,8 +1,7 @@
 <ul>
-@for (user of usersList(); track $index) {
-<li>
-    <p>{{user.name}}</p>
-</li>
-}
+  @for (user of usersList(); track $index) {
+    <li>
+      <app-user [user]="user" (deleteUser)="onDelete($event)" (editUser)="onEdit($event)"></app-user>
+    </li>
+  }
 </ul>
-
